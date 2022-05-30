@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link media="print" onload="this.media='all'"  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="logged-out">
+            <div class="h-100 d-flex justify-content-center align-items-center">     
+                <button class="btn btn-primary" id="btn-metamask-connect">
+                   <img class="mr-1 metamask-logo" src="img/metamask-fox.svg">
+                  Connect MetaMask
+               </button>
+            </div>
+        </div>
+        <div class="logged-in">
+            <div class="modal-content" id="token-manage-modal-content">
+                <div class="modal-header">
+                   <h5 class="modal-title" id="tokenManagementTitle">Contract Deploy</h5>
+                </div>
+                <div class="modal-body mb-2">
+                    <label class="form-label" for="compiled-contract">Compiled Contract</label>
+                    <input type="file" class="form-control contract-info" accept=".bin" id="compiled-contract" />
+                    <label class="form-label mt-3" for="abi-contract">Contract ABI</label>
+                    <input type="file" class="form-control contract-info" accept=".json" id="abi-contract" />
+                    <div class="row text-center mt-2">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary contract-info" id="btn-token-deploy"><i class="fas fa-rocket me-1"></i>Deploy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-1 mb-2 contract-address-div">
+                  <div>
+                     <label class="form-label col-12" for="desktop-contract">Contract Address</label>
+                     <input readonly class="copy-contract-address contract-hash" id="desktop-contract"></input>
+                     <button title="Copy" aria-label="Copy" data-contract="#desktop-contract" class="btn-primary copy-contract-address"><i class="far fa-copy"></i></button>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
+
