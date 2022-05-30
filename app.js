@@ -127,6 +127,7 @@ const refreshPage = () => {
         loggedOut.show();
         loggedIn.hide();
     }
+    $(".current-account").text(accounts[0]);
 };
 
 $(".copy-contract-address").click(function () {
